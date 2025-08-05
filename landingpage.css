@@ -1,0 +1,111 @@
+body{
+    margin-top: 60px;
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    margin-left: 0px;
+}
+.website-header{
+    display: grid;
+    position: fixed;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(19, 25, 33);
+    color: white;
+    left:0px;
+    top:0px;
+    right: 0px;
+    align-items: center;
+    height: 60px;
+}
+.amazon-logo{
+    width: 100px;
+    height: 31px;
+    margin-left: 20px;
+    margin-right: 60px;
+    
+}
+.header-middle-section{
+    display: flex;
+    height: 40px;
+    align-items: center;
+
+}
+.search-button{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius:5px;
+    background-color: rgb(254, 189, 105);
+    height: 42px;
+    border: none;
+    
+}
+.search-magnify{
+    height: 22px;
+    padding: 0px 10px;
+}
+.header-middle-section>input {
+    width: 740px;
+    padding-left: 20px;
+    font-size: 16px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+    height: 40px;
+
+}
+.header-right-section{
+
+    display: flex;
+    margin-right: 20px;
+    margin-left: 163px;
+    margin-top: 7px;
+}
+.return{
+    width: 75px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
+.cart-rider{
+    position: absolute;
+    top: 13px;
+    right: 70px;
+}
+.cart-image{
+    width: 50px;
+}
+
+
+.landingPage-Grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.product-block{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 32px;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+
+}
+.product-image{
+    height:180px
+}
+.product-name{
+    margin: 15px 0px 8px;
+    width: 190px;
+    font-size: 16px;
+}
+.product-rating{
+    width: 100px;
+
+}
+#cars{
+    width: 55px;
+}
+.addtocart-button{
+    background-color: rgb(247, 202, 0);
+    border: none;
+    padding: 7px 0px;
+    border-radius: 18px;
+    font-size: 14px;
+    margin:50px 0px 0px 0px;
+    width: 160px;
+}

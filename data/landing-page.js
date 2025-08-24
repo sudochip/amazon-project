@@ -1,5 +1,5 @@
-let productHTML='';
- const products=[
+ export let productHTML='';
+ export const products=[
     {
         id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
         image: "images/athletic-cotton-socks-6-pairs.jpg",
@@ -378,6 +378,286 @@ let productHTML='';
         "kitchen"
         ]
     },
+    {
+        id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
+        image: "images/duvet-cover-set-blue-twin.jpg",
+        name: "Duvet Cover Set with Zipper Closure",
+        rating: {
+        stars: 4,
+        count: 456
+        },
+        priceCents: 2399,
+        keywords: [
+        "bedroom",
+        "bed sheets",
+        "sheets",
+        "covers",
+        "home"
+        ]
+    },
+    {
+        id: "d2785924-743d-49b3-8f03-ec258e640503",
+        image: "images/women-chunky-beanie-gray.webp",
+        name: "Women's Chunky Cable Beanie - Gray",
+        rating: {
+        stars: 5,
+        count: 83
+        },
+        priceCents: 1250,
+        keywords: [
+        "hats",
+        "winter hats",
+        "beanies",
+        "tuques",
+        "apparel",
+        "womens"
+        ]
+    },
+    {
+        id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
+        image: "images/men-chino-pants-beige.jpg",
+        name: "Men's Classic-fit Pleated Chino Pants",
+        rating: {
+        stars: 4.5,
+        count: 9017
+        },
+        priceCents: 2290,
+        keywords: [
+        "pants",
+        "apparel",
+        "mens"
+        ]
+    },
+    {
+        id: "1c079479-8586-494f-ab53-219325432536",
+        image: "images/men-athletic-shoes-green.jpg",
+        name: "Men's Athletic Sneaker",
+        rating: {
+        stars: 4,
+        count: 229
+        },
+        priceCents: 3890,
+        keywords: [
+        "shoes",
+        "running shoes",
+        "footwear",
+        "mens"
+        ]
+    },
+    {
+        id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
+        image: "images/men-navigator-sunglasses-brown.jpg",
+        name: "Men's Navigator Sunglasses Pilot",
+        rating: {
+        stars: 3.5,
+        count: 42
+        },
+        priceCents: 1690,
+        keywords: [
+        "sunglasses",
+        "glasses",
+        "accessories",
+        "shades"
+        ]
+    },
+    {
+        id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
+        image: "images/non-stick-cooking-set-15-pieces.webp",
+        name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
+        rating: {
+        stars: 4.5,
+        count: 511
+        },
+        priceCents: 6797,
+        keywords: [
+        "cooking set",
+        "kitchen"
+        ]
+    },
+    {
+        id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
+        image: "images/vanity-mirror-silver.jpg",
+        name: "Vanity Mirror with Heavy Base - Chrome",
+        rating: {
+        stars: 4.5,
+        count: 130
+        },
+        priceCents: 1649,
+        keywords: [
+        "bathroom",
+        "washroom",
+        "mirrors",
+        "home"
+        ]
+    },
+    {
+        id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
+        image: "images/women-french-terry-fleece-jogger-camo.jpg",
+        name: "Women's Fleece Jogger Sweatpant",
+        rating: {
+        stars: 4.5,
+        count: 248
+        },
+        priceCents: 2400,
+        keywords: [
+        "pants",
+        "sweatpants",
+        "jogging",
+        "apparel",
+        "womens"
+        ]
+    },
+    {
+        id: "d339adf3-e004-4c20-a120-40e8874c66cb",
+        image: "images/double-elongated-twist-french-wire-earrings.webp",
+        name: "Double Oval Twist French Wire Earrings - Gold",
+        rating: {
+        stars: 4.5,
+        count: 117
+        },
+        priceCents: 2400,
+        keywords: [
+        "accessories",
+        "womens"
+        ]
+    },
+    {
+        id: "d37a651a-d501-483b-aae6-a9659b0757a0",
+        image: "images/round-airtight-food-storage-containers.jpg",
+        name: "Round Airtight Food Storage Containers - 5 Piece",
+        rating: {
+        stars: 4,
+        count: 126
+        },
+        priceCents: 2899,
+        keywords: [
+        "boxes",
+        "food containers",
+        "kitchen"
+        ]
+    },
+    {
+        id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
+        image: "images/coffeemaker-with-glass-carafe-black.jpg",
+        name: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
+        rating: {
+        stars: 4.5,
+        count: 1211
+        },
+        priceCents: 2250,
+        keywords: [
+        "coffeemakers",
+        "kitchen",
+        "appliances"
+        ]
+    },
+    {
+        id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
+        image: "images/blackout-curtains-black.jpg",
+        name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
+        rating: {
+        stars: 4.5,
+        count: 363
+        },
+        priceCents: 3099,
+        keywords: [
+        "bedroom",
+        "home"
+        ]
+    },
+    {
+        id: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
+        image: "images/cotton-bath-towels-teal.webp",
+        name: "100% Cotton Bath Towels - 2 Pack, Light Teal",
+        rating: {
+        stars: 4.5,
+        count: 93
+        },
+        priceCents: 2110,
+        keywords: [
+        "bathroom",
+        "home",
+        "towels"
+        ]
+    },
+    {
+        id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
+        image: "images/knit-athletic-sneakers-pink.webp",
+        name: "Waterproof Knit Athletic Sneakers - Pink",
+        rating: {
+        stars: 4,
+        count: 89
+        },
+        priceCents: 3390,
+        keywords: [
+        "shoes",
+        "running shoes",
+        "footwear",
+        "womens"
+        ]
+    },
+    {
+        id: "77a845b1-16ed-4eac-bdf9-5b591882113d",
+        image: "images/countertop-blender-64-oz.jpg",
+        name: "Countertop Blender - 64oz, 1400 Watts",
+        rating: {
+        stars: 4,
+        count: 3
+        },
+        priceCents: 10747,
+        keywords: [
+        "food blenders",
+        "kitchen",
+        "appliances"
+        ]
+    },
+    {
+        id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
+        image: "images/floral-mixing-bowl-set.jpg",
+        name: "10-Piece Mixing Bowl Set with Lids - Floral",
+        rating: {
+        stars: 5,
+        count: 679
+        },
+        priceCents: 3899,
+        keywords: [
+        "mixing bowls",
+        "baking",
+        "cookware",
+        "kitchen"
+        ]
+    },
+    {
+        id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
+        image: "images/kitchen-paper-towels-30-pack.jpg",
+        name: "2-Ply Kitchen Paper Towels - 30 Pack",
+        rating: {
+        stars: 4.5,
+        count: 1045
+        },
+        priceCents: 5799,
+        keywords: [
+        "kitchen",
+        "kitchen towels",
+        "tissues"
+        ]
+    },
+    {
+        id: "bc2847e9-5323-403f-b7cf-57fde044a955",
+        image: "images/men-cozy-fleece-zip-up-hoodie-red.jpg",
+        name: "Men's Full-Zip Hooded Fleece Sweatshirt",
+        rating: {
+        stars: 4.5,
+        count: 3157
+        },
+        priceCents: 2400,
+        keywords: [
+        "sweaters",
+        "hoodies",
+        "apparel",
+        "mens"
+        ]
+    }
  ].forEach((Products)=>{
     let html=`<div class="product-block">
                 <div class="image-div">
@@ -403,7 +683,11 @@ let productHTML='';
                         <option value="10">10</option>
                     </select>
                 </div>
-                <button class="addtocart-button" data-product-id="${Products.id}">Add to Cart</button>
+                <div class="addToCart">
+                    <div id="notify-${Products.id}" style="font-size:16px; display:flex; align-items:center;color:green;"></div>
+                    <button class="addtocart-button" data-product-id="${Products.id}">Add to Cart</button>
+                </div>
+               
 
             </div>`
     productHTML+=html;

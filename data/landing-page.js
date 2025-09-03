@@ -692,4 +692,4 @@
             </div>`
     productHTML+=html;
  })
-document.querySelector('.landingPage-Grid').innerHTML=productHTML
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div >
+               <a href="./index.html"><img class="logo" src="images/elements/amazon-logo-amazon-icon-free-free-vector.jpg" alt="logo" style="background-color: black;"></a>
+            </div>
+            <div class="checkout">
+                <div>Checkout (<span>2 Items</span>)</div>
+            </div>
+            <div>
+                <img src="images/elements/checkout-lock-icon.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="content-info">Review your order</div>
+        <div class="summaryVsProducts">
+            <div class="product-section"> 
+                <div class="product-card">
+                    <div class="delivery-time">Delivery date: Tuesday, September 2</div>
+                    <div class="product-detail-card">
+                        <div><img class="product-image" src="images/adults-plain-cotton-tshirt-2-pack-teal.jpg"></div>
+                        <div>
+                            <strong>Adults Plain Cotton T-Shirt - 2 Pack</strong>
+                            <div style="font-weight: 600; color:rgb(187, 39, 4);margin:10px 0px">$7.99</div>
+                            <div class="qty-add-del">
+                                <div>Quantity: 1</div>
+                                <div class="update-button">Update</div>
+                                <div class="delete-button">Delete</div>
+                            </div>
+                        </div>
+                        <div class="oneAtATime">
+                            <div><strong>Choose a delivery option:</strong></div>
+                            <div class="option-1">
+                                <input type="radio" class="delivery-options" name="option">
+                                <div>
+                                    <div class="delivery-dates">Monday, September 8</div>
+                                    <div class="delivery-price">FREE Shipping</div>
+                                </div>
+                            </div>
+                            <div class="option-2">
+                                <input type="radio" class="delivery-options" name="option">
+                                <div>
+                                    <div class="delivery-dates">Tuesday, September 2</div>
+                                    <div class="delivery-price">$4.99 - Shipping</div>
+                                </div>
+                            </div>
+                            <div class="option-3">
+                                <input type="radio" class="delivery-options" name="option">
+                                <div>
+                                    <div class="delivery-dates">Friday, August 29</div>
+                                    <div class="delivery-price">$9.99 - Shipping</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <div><strong>Order Summary</strong></div>
+                <div class="spacelelo">
+                    <div class="summary-split"><span>Items (2):</span><span>$26.98</span></div>
+                    <div class="summary-split"><span>Shipping & handling:</span><span>$0.00</span></div>
+                </div>
+                <div class="spacelelo">
+                    <div class="summary-split"><span>Total before tax:</span><span>$26.98</span></div>
+                    <div class="summary-split"><span>Estimated tax (10%):</span><span>$2.70</span></div>
+                </div>
+                
+                <div class="summary-split orderTotal"><span>Order total:</span><span>$29.68</span></div>
+                <button class="placeOrder">Place Your Order</button>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="scripts/checkout-Page.js"></script>
+</body>
+</html>

@@ -1,6 +1,4 @@
-import {products,productHTML} from './landing-page.js';
-import {cart} from './cart.js'
-document.querySelector('.landingPage-Grid').innerHTML=productHTML
+import {cart} from '../data/cart.js'
 let cartValue=JSON.parse(localStorage.getItem('cartqty'))||0;
 let interverId=null;
 document.querySelector(".cart-qty").innerHTML=cartValue;
@@ -14,7 +12,7 @@ function notify(productId){
     clearTimeout(interverId);
     interverId=setTimeout(()=>{
         document.getElementById(`notify-${productId}`).innerHTML=''; 
-    },2000)
+    },1000)
 }
 document.querySelectorAll(".addtocart-button").forEach((button)=>{
     button.addEventListener("click",()=>{
@@ -49,7 +47,7 @@ document.querySelectorAll(".addtocart-button").forEach((button)=>{
 document.querySelector('.reset').addEventListener('click',()=>{
     localStorage.removeItem('cartqty')
     localStorage.removeItem('cartValue')
-    cart = [];       // reset in-memory cart
+    cart.length= 0;       // reset in-memory cart
     cartValue = 0;
     document.querySelector(".cart-qty").innerHTML=0;
 })

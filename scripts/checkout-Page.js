@@ -1,6 +1,8 @@
-import {cart} from '../data/cart.js'
+import {cart,cartValue,saveqty,updateCartValue} from '../data/cart.js'
 import {products} from '../data/products.js'
+import { removeFromcart } from '../functions/cart-functions.js'
 let html=''
+document.querySelector('.cartVal').innerHTML=`Items ${cartValue}`;
 cart.forEach((product)=>{
     let {productId}=product;
     console.log(productId);
@@ -10,7 +12,7 @@ cart.forEach((product)=>{
             matchingItem=item
         }
     })
-    html+=`<div class="product-card">
+    html+=`<div class="product-card js-${productId}">
                 <div class="delivery-time">Delivery date: Tuesday, September 2</div>
                 <div class="product-detail-card">
                     <div><img class="product-image" src="${matchingItem.image}"></div>
@@ -20,7 +22,7 @@ cart.forEach((product)=>{
                         <div class="qty-add-del">
                             <div>Quantity: ${product.quantity}</div>
                             <div class="update-button">Update</div>
-                            <div class="delete-button">Delete</div>
+                            <div class="delete-button" data-product-id="${productId}">Delete</div>
                         </div>
                     </div>
                     <div class="oneAtATime">
@@ -53,3 +55,15 @@ cart.forEach((product)=>{
             </div>`
 }) 
 document.querySelector('.product-section').innerHTML=html
+
+document.querySelectorAll('.delete-button').forEach((button)=>{
+    button.addEventListener('click',()=>{
+       const {productId}=button.dataset;
+       removeFromcart(productId);
+       updateCartValue();
+       saveqty(cartValue);
+       document.querySelector(`.js-${productId}`).remove()
+       document.querySelector('.cartVal').innerHTML=`Items ${cartValue}`;
+    })
+})
+

@@ -1,19 +1,7 @@
-import {cart} from '../data/cart.js'
-let cartValue=JSON.parse(localStorage.getItem('cartqty'))||0;
-let interverId=null;
+import {cart,saveqty,cartValue,saveCart} from '../data/cart.js'
+import { getQty,notify} from '../functions/cart-functions.js';
+let cartTemp=cartValue;
 document.querySelector(".cart-qty").innerHTML=cartValue;
-function getQty(productId){
-    let value= Number(document.getElementById(productId).value);
-    return value;
-}
-function notify(productId){
-    
-    document.getElementById(`notify-${productId}`).innerHTML='<span class="material-icons" style="font-size:18px;">check_circle</span>Added';
-    clearTimeout(interverId);
-    interverId=setTimeout(()=>{
-        document.getElementById(`notify-${productId}`).innerHTML=''; 
-    },1000)
-}
 document.querySelectorAll(".addtocart-button").forEach((button)=>{
     button.addEventListener("click",()=>{
         const { productId } = button.dataset;
@@ -33,24 +21,18 @@ document.querySelectorAll(".addtocart-button").forEach((button)=>{
                 quantity:getQty(productId)
             })
         }
-        localStorage.setItem('cartValue',JSON.stringify(cart));
-        cartValue+=getQty(productId);
-        localStorage.setItem('cartqty',JSON.stringify(cartValue));
+        cartTemp+=getQty(productId);
+        saveCart(cart);
+        saveqty(cartTemp);
         notify(productId);
-        document.querySelector(".cart-qty").innerHTML=cartValue;
+        document.querySelector(".cart-qty").innerHTML=cartTemp;
         console.log(cart);
     })
-    
-
 })
-
 document.querySelector('.reset').addEventListener('click',()=>{
     localStorage.removeItem('cartqty')
     localStorage.removeItem('cartValue')
     cart.length= 0;       // reset in-memory cart
-    cartValue = 0;
+    cartTemp = 0;
     document.querySelector(".cart-qty").innerHTML=0;
 })
-
-
-

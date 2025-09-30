@@ -88,6 +88,9 @@ body{
 .qty-add-del{
     display: flex;
 }
+.qty-input{
+    width: 30px;
+}
 .update-button,.delete-button{
     margin-left: 10px;
     color: rgb(7, 129, 215);

@@ -20,3 +20,14 @@ export function updateCartValue(){
         console.log(cartValue);
     })
 }
+// upate product quantity in checkout page
+export function updateProductqty(productId,value){
+    let matchingItem;
+    cart.forEach((item)=>{
+        if(productId===item.productId){
+            matchingItem=item;
+        }
+    })
+    matchingItem.quantity=value;
+    
+}

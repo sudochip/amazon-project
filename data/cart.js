@@ -12,13 +12,14 @@ export function saveCart(tempCart){
 }
 
 // Updates cart value
-export function updateCartValue(){
-    cartValue=0;
+export function updateSaveCartValue(){
+    let tempvalue=0;
     cart.forEach((products)=>{
         let productQty=products.quantity;
-        cartValue+=productQty;
-        console.log(cartValue);
+        tempvalue+=productQty;
     })
+    saveqty(tempvalue);
+    document.querySelector('.cartVal').innerHTML=`Items ${cartValue}`;
 }
 // upate product quantity in checkout page
 export function updateProductqty(productId,value){

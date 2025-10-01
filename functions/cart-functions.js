@@ -1,5 +1,5 @@
 import {cart,saveCart} from '../data/cart.js'
-let interverId=null;
+
 
 // It will get selected quantity form qty section
 export function getQty(productId){
@@ -8,7 +8,7 @@ export function getQty(productId){
 }
 // Shows "Added" on screen
 export function notify(productId){
-    
+    let interverId=null;
     document.getElementById(`notify-${productId}`).innerHTML='<span class="material-icons" style="font-size:18px;">check_circle</span>Added';
     clearTimeout(interverId);
     interverId=setTimeout(()=>{
@@ -25,4 +25,17 @@ export function removeFromcart(productId){
             return 0;
         }
     })
+    console.log(cart);
+}
+
+// set date month and year
+
+export function setDate(n,t=0){
+    if(t==0){
+        return (dayjs().add(n,'days').format('dddd, MMMM DD'));
+    }
+    if(t==1){
+        return (dayjs().add(n,'days').format('dddd, MMMM DD'));
+    }
+    
 }

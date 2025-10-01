@@ -34,4 +34,4 @@ products.forEach((Products)=>{
             </div>`
     productHTML+=html;
  })
-let onPage=document.querySelector('.landingPage-Grid').innerHTML=productHTML
+document.querySelector('.landingPage-Grid').innerHTML=productHTML

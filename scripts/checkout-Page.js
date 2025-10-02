@@ -31,30 +31,30 @@ cart.forEach((product)=>{
                         <div>
                             <div><strong>Choose a delivery option:</strong></div>
                             <div class="option-1">
-                                <input type="radio" class="delivery-options" name="${productId}" value="${setDate(5)}" checked>
+                                <input type="radio" class="delivery-${productId}" name="${productId}" value="0" checked>
                                 <div>
                                     <div class="delivery-dates">${setDate(9)}</div>
                                     <div class="delivery-price">FREE Shipping</div>
                                 </div>
                             </div>
                             <div class="option-2">
-                                <input type="radio" class="delivery-options" name="${productId}" value="${setDate(5)}">
+                                <input type="radio" class="delivery-${productId}" name="${productId}" value="499">
                                 <div>
                                     <div class="delivery-dates">${setDate(5)}</div>
                                     <div class="delivery-price">$4.99 - Shipping</div>
                                 </div>
                             </div>
                             <div class="option-3">
-                                <input type="radio" class="delivery-options" name="${productId}" value="${setDate(1)}">
+                                <input type="radio" class="delivery-${productId}" name="${productId}" value="999">
                                 <div>
                                     <div class="delivery-dates">${setDate(1)}</div>
                                     <div class="delivery-price">$9.99 - Shipping</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
-            </div>`
+            </div>` 
 }) 
 document.querySelector('.product-section').innerHTML=html
 

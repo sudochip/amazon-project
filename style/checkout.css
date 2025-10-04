@@ -35,10 +35,18 @@ body{
 .checkout>div>span{
     color: rgb(73, 150, 190);
 }
+.disclaimer{
+    margin-top:100px ;
+    color: blue;
+    font-size: 20px;
+}
+.disclaimer>strong{
+    color:red;
+}
 .main-content{
     padding-left: 30px;
     padding-right: 30px;
-    margin-top: 140px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;

@@ -2,7 +2,7 @@ import {cart,cartValue,saveCart,saveqty,updateSaveCartValue,updateProductqty} fr
 import {products} from '../data/products.js'
 import { removeFromcart,setDate } from '../functions/cart-functions.js'
 import {} from 'https://unpkg.com/dayjs@1.11.10/dayjs.min.js'
-console.log(setDate(0))
+alert("It is NOT the official website of amazon")
 let html='';
 let updateCheck= 1;
 document.querySelector('.cartVal').innerHTML=`Items ${cartValue}`;

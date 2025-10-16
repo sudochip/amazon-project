@@ -1,10 +1,12 @@
 import {cart,cartValue,saveCart,saveqty,updateSaveCartValue,updateProductqty} from '../data/cart.js'
+import { deliveryop } from '../data/dileveryopt.js'
 import {products} from '../data/products.js'
-import { removeFromcart,setDate } from '../functions/cart-functions.js'
+import { removeFromcart,setDate,optionhtml,optionChanged,showOnPage,updateSummary } from '../functions/cart-functions.js'
 import {} from 'https://unpkg.com/dayjs@1.11.10/dayjs.min.js'
-alert("It is NOT the official website of amazon")
+//alert("It is NOT the official website of amazon")
 let html='';
 let updateCheck= 1;
+updateSummary();
 document.querySelector('.cartVal').innerHTML=`Items ${cartValue}`;
 cart.forEach((product)=>{
     let {productId}=product;
@@ -14,8 +16,9 @@ cart.forEach((product)=>{
             matchingItem=item;
         }
     })
+    console.log(product.deliveryID)
     html+=`<div class="product-card js-${productId}">
-                <div class="delivery-time">Delivery date: ${setDate(9)}</div>
+                <div class="delivery-time delivery-${productId}">Delivery date: ${showOnPage(product.deliveryID)}</div>
                 <div class="product-detail-card">
                     <div><img class="product-image" src="${matchingItem.image}"></div>
                     <div style="width:268px;">
@@ -30,33 +33,14 @@ cart.forEach((product)=>{
                     <div class="oneAtATime">
                         <div>
                             <div><strong>Choose a delivery option:</strong></div>
-                            <div class="option-1">
-                                <input type="radio" class="delivery-${productId}" name="${productId}" value="0" checked>
-                                <div>
-                                    <div class="delivery-dates">${setDate(9)}</div>
-                                    <div class="delivery-price">FREE Shipping</div>
-                                </div>
-                            </div>
-                            <div class="option-2">
-                                <input type="radio" class="delivery-${productId}" name="${productId}" value="499">
-                                <div>
-                                    <div class="delivery-dates">${setDate(5)}</div>
-                                    <div class="delivery-price">$4.99 - Shipping</div>
-                                </div>
-                            </div>
-                            <div class="option-3">
-                                <input type="radio" class="delivery-${productId}" name="${productId}" value="999">
-                                <div>
-                                    <div class="delivery-dates">${setDate(1)}</div>
-                                    <div class="delivery-price">$9.99 - Shipping</div>
-                                </div>
-                            </div>
+                            ${optionhtml(productId,product.deliveryID)};
                         </div> 
                     </div>
                 </div>
             </div>` 
 }) 
 document.querySelector('.product-section').innerHTML=html
+
 
 document.querySelectorAll('.delete-button').forEach((button)=>{
     button.addEventListener('click',()=>{
@@ -65,6 +49,7 @@ document.querySelectorAll('.delete-button').forEach((button)=>{
        updateSaveCartValue();
        saveqty(cartValue);
        document.querySelector(`.js-${productId}`).remove();
+       updateSummary()
     })
 })
 
@@ -85,9 +70,19 @@ document.querySelectorAll('.update-button').forEach((button)=>{
                 updateProductqty(productId,newValue);
                 saveCart(cart);
                 updateSaveCartValue();
+                updateSummary()
             }
             return 0;
         }
     })
     
 })
+
+document.querySelectorAll('.delivery').forEach((input)=>{
+    input.addEventListener('click',()=>{
+        optionChanged(input.value,input.name);
+        showOnPage(input.value,input.name);
+        updateSummary();
+    })
+})
+

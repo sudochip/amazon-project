@@ -1,6 +1,6 @@
 import {products} from "../data/products.js";
 let productHTML='';
-alert("DISCLAIMER: This website was created only as a personal educational project.It is not official site")
+//alert("DISCLAIMER: This website was created only as a personal educational project.It is not official site")
 products.forEach((Products)=>{
     let html=`<div class="product-block">
                 <div class="image-div">

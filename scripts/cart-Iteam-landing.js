@@ -18,7 +18,8 @@ document.querySelectorAll(".addtocart-button").forEach((button)=>{
         else{
             cart.push({
                 productId,
-                quantity:getQty(productId)
+                quantity:getQty(productId),
+                deliveryID:1
             })
         }
         cartTemp+=getQty(productId);
